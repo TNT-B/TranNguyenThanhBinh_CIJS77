@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function mostAppearing(arr = []) {
+        const occurrences = arr.reduce((result, item) => {
+          if (result.hasOwnProperty(item)) {
+            result[item]++;
+          } else {
+            result[item] = 1;
+          }
+
+          return result;
+        }, {});
+
+        const result = { value: 0, count: 0 };
+        for (const item of Object.entries(occurrences)) {
+          if (item[1] > result.count) {
+            Object.assign(result, { value: item[0], count: item[1] });
+          }
+        }
+
+        return result;
+      }
+      console.log(mostAppearing([1, 2, 3, 5, 4, 2, 6, 4]))
+    </script>
+  </body>
+</html>
