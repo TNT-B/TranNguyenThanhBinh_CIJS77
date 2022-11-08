@@ -1,0 +1,58 @@
+.phone-book-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  margin: auto;
+  width: 500px;
+  flex-direction: column;
+  font-size: large;
+  font-weight: 400;
+}
+
+.search-bar,
+.header {
+  display: flex;
+}
+
+.phone-item {
+  background-color: rgb(233, 233, 233);
+  padding: 1rem;
+  border-radius: 15px;
+  display: flex;
+  margin: 0.5rem auto;
+}
+
+button{
+  position: relative;
+  border: none;
+  background-color: dodgerblue;
+  color: aliceblue;
+  border-radius: 15px;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+button:after {
+  content: "";
+  background-color: cornflowerblue;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
