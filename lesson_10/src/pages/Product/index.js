@@ -12,10 +12,11 @@ function Product(props) {
   }
 
   return (
-    <div>
-      <p>Product {params.id}</p>
-      <p>{found.title}</p>
-      <p><image><a ></a></image></p>
+    <div className="productStyle">
+      <p className="id">Product {params.id}</p>
+      <img className="image" src={found.image} alt="picture"/>
+      <p className="title">{found.title}</p>
+      <p className="priceStyle">${found.price}</p>
     </div>
     );
 }
